@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  lint:
+    docker:
+      - image: python:3.6
+
+    steps:
+      - checkout
+      - run:
+          name: Install pipenv
+          command: pip install pipenv
+      - run:
+          name: Install dependencies
+          command: pipenv install --system
+      - run:
+          name: Run pylint
+          command: pylint source/ --disable='C0103,C0111,C0301,R0201,R0903,E0401'
+      - run:
+          name: Run flake8
+          command: flake8 --show-source source/ --ignore='E501'
+
+workflows:
+  version: 2
+  build_deploy:
+    jobs:
+      - lint
