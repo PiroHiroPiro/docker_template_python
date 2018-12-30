@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/python/Dockerfile
+    container_name: docker_template
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./source:/usr/src/source
