@@ -3,7 +3,7 @@
 ### set up
 ```
 $ pip install pipenv
-$ pipenv install
+$ pipenv install --dev
 ```
 
 ### run
@@ -28,4 +28,15 @@ after `run jupyter notebook`, start up at another terminal
 ```
 $ docker ps
 $ docker exec -it [CONTAINER ID] /bin/bash
+```
+
+## lint
+```
+$ pipenv run pylint
+$ pipenv run flake
+```
+
+## code format
+```
+$ pipenv run fix
 ```
