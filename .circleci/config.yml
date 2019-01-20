@@ -11,13 +11,13 @@ jobs:
           command: pip install pipenv
       - run:
           name: Install dependencies
-          command: pipenv install --system
+          command: pipenv install --system --dev
       - run:
           name: Run pylint
-          command: pylint source/ --disable='C0103,C0111,C0301,R0201,R0903,E0401'
+          command: pipenv run pylint
       - run:
           name: Run flake8
-          command: flake8 --show-source source/ --ignore='E501'
+          command: pipenv run flake
 
 workflows:
   version: 2

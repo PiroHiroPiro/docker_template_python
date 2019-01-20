@@ -2,12 +2,16 @@
 ## on local
 ### set up
 ```
+$ cp .env.example .env
+$ vim .env
 $ pip install pipenv
 $ pipenv install --dev
 ```
 
 ### run
 ```
+$ cp .env.example .env
+$ vim .env
 $ pipenv shell
 $ python APP.PY
 ```
@@ -34,9 +38,4 @@ $ docker exec -it [CONTAINER ID] /bin/bash
 ```
 $ pipenv run pylint
 $ pipenv run flake
-```
-
-## code format
-```
-$ pipenv run fix
 ```

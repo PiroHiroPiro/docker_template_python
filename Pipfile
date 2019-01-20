@@ -6,12 +6,9 @@ verify_ssl = true
 [dev-packages]
 pylint = "*"
 flake8 = "*"
-autopep8 = "*"
 
 [packages]
 jupyter = "*"
-pylint = "*"
-flake8 = "*"
 
 [requires]
 python_version = "3.6"
@@ -19,4 +16,3 @@ python_version = "3.6"
 [scripts]
 pylint = "pylint source/ --disable='C0103,C0111,C0301,R0201,R0903,E0401,E0611'"
 flake = "flake8 --show-source source/ --ignore='E501'"
-fix = "autopep8 -ivr source/"
