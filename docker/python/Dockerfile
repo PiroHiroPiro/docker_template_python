@@ -7,7 +7,8 @@ WORKDIR /usr/src
 COPY ./Pipfile  ./
 COPY ./Pipfile.lock ./
 
-RUN pip install pipenv \
- && pipenv install --system --dev
+RUN pip install --upgrade pip
+RUN pip install pipenv
+RUN pipenv install --system --dev
 
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root"]
