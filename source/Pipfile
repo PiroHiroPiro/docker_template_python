@@ -11,7 +11,7 @@ flake8 = "*"
 jupyter = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
 
 [scripts]
 pylint = "pylint source/ --disable='C0103,C0111,C0301,R0201,R0903,E0401,E0611'"
