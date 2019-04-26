@@ -4,7 +4,7 @@ This is a Docker template that provides an environment with Python, Pipenv and C
 
 ## Requirement
 
-- [docker](https://www.docker.com/)
+- [Docker](https://www.docker.com/)
   - docker-compose
 
 ## Usage
