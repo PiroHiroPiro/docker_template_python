@@ -1,14 +1,14 @@
 version: "3"
 
 services:
-  app:
+  python:
     build:
       context: .
       dockerfile: ./docker/python/Dockerfile
     container_name: docker_template_python
+    env_file:
+      - ./.env
     ports:
       - "8888:8888"
     volumes:
       - ./source:/usr/src/source
-    env_file:
-      - ./.env
