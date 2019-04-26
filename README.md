@@ -1,41 +1,42 @@
-# Python + Pipenv + Docker + CircleCI Template
-## on local
-### set up
-```
-$ cp .env.example .env
-$ vim .env
-$ pip install pipenv
-$ pipenv install --dev
-```
+# Python + Pipenv + CircleCI Docker template
 
-### run
-```
-$ cp .env.example .env
-$ vim .env
-$ pipenv shell
-$ python APP.PY
-```
+This is a Docker template that provides an environment with Python, Pipenv and CircleCI.
 
-## on docker container
-### set up
-```
-$ docker-compose build
-```
+## Requirement
 
-### run jupyter notebook
-```
+- [docker](https://www.docker.com/)
+  - docker-compose
+
+## Usage
+
+Run Jupyter notebook:
+
+```console
 $ docker-compose up
 ```
 
-### run bash
-after `run jupyter notebook`, start up at another terminal
-```
-$ docker ps
-$ docker exec -it [CONTAINER ID] /bin/bash
+Go to `http://localhost:8888` and you'll see the notebooks.
+
+## Install
+
+Clone repository:
+
+```console
+$ git clone https://github.com/PiroHiroPiro/docker_template_python_pipenv_circleci.git
+$ cd docker_template_python_pipenv_circleci
 ```
 
-## lint
+Build image:
+
+```console
+$ cp .env.example .env
+$ docker-compose build
 ```
-$ pipenv run pylint
-$ pipenv run flake
-```
+
+## Licence
+
+This software is released under the MIT License, see [LICENSE](https://github.com/PiroHiroPiro/docker_template_python_pipenv_circleci/blob/master/LICENSE).
+
+## Author
+
+[Hiroyuki Nishizawa](https://github.com/PiroHiroPiro)
