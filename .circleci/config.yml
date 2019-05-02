@@ -10,8 +10,11 @@ jobs:
           name: Install pipenv
           command: pip install pipenv
       - run:
+          name: Copy Pipfile
+          command: cp ./source/Pipfile ./
+      - run:
           name: Install dependencies
-          command: pipenv install --system --dev
+          command: pipenv install --system --dev --skip-lock
       - run:
           name: Run pylint
           command: pipenv run pylint
