@@ -12,3 +12,4 @@ services:
       - "8888:8888"
     volumes:
       - ./source:/usr/src/source
+    working_dir: /usr/src/source
