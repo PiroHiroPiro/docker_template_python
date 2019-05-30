@@ -26,4 +26,4 @@ RUN pip install --upgrade pip \
     && pip install pipenv \
     && pipenv install --skip-lock --system --dev
 
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root"]
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--NotebookApp.token="]
