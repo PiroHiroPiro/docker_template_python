@@ -10,6 +10,7 @@ services:
       - ./.env
     ports:
       - "8888:8888"
+    tty: true
     volumes:
       - ./source:/usr/src/source
     working_dir: /usr/src/source
