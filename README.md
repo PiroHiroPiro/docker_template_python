@@ -1,6 +1,6 @@
-# Python + Pipenv + CircleCI Docker template
+# Python docker template
 
-This is a Docker template that provides an environment with Python, Pipenv and CircleCI.
+This is a template that provides an python environment.
 
 ## Requirement
 
@@ -22,8 +22,8 @@ Go to `http://localhost:8888` and you'll see the notebooks.
 Clone repository:
 
 ```console
-$ git clone https://github.com/PiroHiroPiro/docker_template_python_pipenv_circleci.git
-$ cd docker_template_python_pipenv_circleci
+$ git clone https://github.com/PiroHiroPiro/docker_template_python.git
+$ cd docker_template_python
 ```
 
 Build image:
