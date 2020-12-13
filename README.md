@@ -35,7 +35,7 @@ $ docker-compose build
 
 ## Licence
 
-This software is released under the MIT License, see [LICENSE](https://github.com/PiroHiroPiro/docker_template_python_pipenv_circleci/blob/master/LICENSE).
+This software is released under the MIT License, see [LICENSE](https://github.com/PiroHiroPiro/docker_template_python/blob/master/LICENSE).
 
 ## Author
 
