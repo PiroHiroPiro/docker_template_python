@@ -1,0 +1,31 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pytest:
+    name: Run tests with pytest
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.9]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install and configure Poetry
+        uses: snok/install-poetry@v1.1.1
+        with:
+          virtualenvs-create: false
+          virtualenvs-in-project: false
+      - name: Install Dependencies
+        run: poetry install --no-interaction
+        working-directory: ./source
+      - name: Run Tests
+        run: pytest
+        working-directory: ./source
