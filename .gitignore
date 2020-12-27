@@ -712,4 +712,4 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/code,django,git,flask,linux,macos,pycharm,pycharm+all,pycharm+iml,python,opencv,osx,venv,virtualenv,webstorm,webstorm+all,webstorm+iml,windows
 
 # Custom ignore
-Pipfile.lock
+poetry.lock

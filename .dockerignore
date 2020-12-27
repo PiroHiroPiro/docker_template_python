@@ -1,4 +1,4 @@
-Pipfile.lock
+poetry.lock
 .venv
 .mypy_cache
 __pycache__
