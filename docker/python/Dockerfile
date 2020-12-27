@@ -1,9 +1,10 @@
-FROM python:3.7
+FROM python:3.9
 
 ENV PYTHONUNBUFFERED=1
 
 RUN apt-get update -y --fix-missing \
     && apt-get install -y --no-install-recommends \
+    apt-utils \
     locales
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -18,12 +19,11 @@ ENV LANG=ja_JP.UTF8
 
 WORKDIR /usr/src/source
 
-ENV PIPENV_VENV_IN_PROJECT=1
-
-COPY ./source/Pipfile ./
+COPY ./source/pyproject.toml ./
 
 RUN pip install --upgrade pip \
-    && pip install pipenv \
-    && pipenv install --skip-lock --system --dev
+    && pip install poetry \
+    && poetry config virtualenvs.create false \
+    && poetry install
 
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--NotebookApp.token="]

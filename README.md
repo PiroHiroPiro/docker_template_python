@@ -33,6 +33,8 @@ $ cp .env.example .env
 $ docker-compose build
 ```
 
+Change the configuration file `source/pyproject.toml`.
+
 ## Licence
 
 This software is released under the MIT License, see [LICENSE](https://github.com/PiroHiroPiro/docker_template_python/blob/master/LICENSE).
