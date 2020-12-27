@@ -713,3 +713,4 @@ $RECYCLE.BIN/
 
 # Custom ignore
 poetry.lock
+!*/.gitkeep
