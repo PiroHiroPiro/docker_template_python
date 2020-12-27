@@ -1,5 +1,8 @@
 # Python docker template
 
+![Test](https://github.com/PiroHiroPiro/docker_template_python/workflows/Test/badge.svg)
+![Code Style](https://github.com/PiroHiroPiro/docker_template_python/workflows/Code%20Style/badge.svg)
+
 This is a template that provides an python environment.
 
 ## Requirement
