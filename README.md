@@ -14,7 +14,7 @@ This is a template that provides an python environment.
 
 Run Jupyter notebook:
 
-```console
+```shell
 $ docker-compose up
 ```
 
@@ -24,14 +24,14 @@ Go to `http://localhost:8888` and you'll see the notebooks.
 
 Clone repository:
 
-```console
+```shell
 $ git clone https://github.com/PiroHiroPiro/docker_template_python.git
 $ cd docker_template_python
 ```
 
 Build image:
 
-```console
+```shell
 $ cp .env.example .env
 $ docker-compose build
 ```
