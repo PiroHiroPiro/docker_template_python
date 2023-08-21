@@ -29,5 +29,7 @@ jobs:
         run: poetry install --no-interaction
         working-directory: ./source
       - name: Check code style with Black
-        run: black --check --diff .
-        working-directory: ./source
+        uses: psf/black@stable
+        with:
+          options: "--check --diff ."
+          src: "./source"
