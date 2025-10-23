@@ -1,4 +1,4 @@
-poetry.lock
+uv.lock
 .venv
 .mypy_cache
 __pycache__

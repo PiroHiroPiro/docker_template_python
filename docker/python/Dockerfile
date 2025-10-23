@@ -1,6 +1,6 @@
-FROM python:3.9
+FROM python:3.12
 
-ENV PYTHONUNBUFFERED=1
+ENV PYTHONUNBUFFERED 1
 
 RUN apt-get update -y --fix-missing \
     && apt-get install -y --no-install-recommends \
@@ -14,16 +14,18 @@ RUN echo "ja_JP.UTF-8 UTF-8" > /etc/locale.gen \
     && dpkg-reconfigure locales \
     && /usr/sbin/update-locale LANG=ja_JP.UTF-8
 
-ENV LC_ALL=ja_JP.UTF-8
-ENV LANG=ja_JP.UTF8
+ENV LC_ALL ja_JP.UTF-8
+ENV LANG ja_JP.UTF8
 
 WORKDIR /usr/src/source
 
 COPY ./source/pyproject.toml ./
 
+ENV UV_PROJECT_ENVIRONMENT /usr/local
+
 RUN pip install --upgrade pip \
-    && pip install poetry \
-    && poetry config virtualenvs.create false \
-    && poetry install
+    && pip install uv \
+    && uv tool install ruff \
+    && uv sync
 
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--NotebookApp.token="]
