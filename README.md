@@ -8,14 +8,13 @@ This is a template that provides an python environment.
 ## Requirement
 
 - [Docker](https://www.docker.com/)
-  - docker-compose
 
 ## Usage
 
 Run Jupyter notebook:
 
 ```shell
-$ docker-compose up
+$ docker compose up
 ```
 
 Go to `http://localhost:8888` and you'll see the notebooks.
@@ -33,14 +32,10 @@ Build image:
 
 ```shell
 $ cp .env.example .env
-$ docker-compose build
+$ docker compose build
 ```
 
 Change the configuration file `source/pyproject.toml`.
-
-## Licence
-
-This software is released under the MIT License, see [LICENSE](https://github.com/PiroHiroPiro/docker_template_python/blob/master/LICENSE).
 
 ## Author
 
